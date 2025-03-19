@@ -26,33 +26,33 @@
             <tbody>
                 <tr>
                     <td class="bg-yellow-200 p-2">🍳 Desayuno</td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
                 </tr>
                 <tr>
                     <td class="bg-green-200 p-2">🍛 Comida</td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
                 </tr>
                 <tr>
                     <td class="bg-red-200 p-2">🍲 Cena</td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
-                    <td class="border border-gray-300"><input type="text" class="w-full p-2 cell"></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
+                    <td class="border border-gray-300"><textarea class="w-full p-2 cell resize-none" rows="2"></textarea></td>
                 </tr>
             </tbody>
         </table>
@@ -75,7 +75,6 @@
 
         let celdaSeleccionada = null;
 
-        // Asignar evento de selección a las celdas
         document.querySelectorAll('.cell').forEach(cell => {
             cell.addEventListener('click', () => {
                 celdaSeleccionada = cell;
@@ -84,13 +83,12 @@
 
         function generarComidas() {
             if (celdaSeleccionada) {
-                // Asigna una sugerencia aleatoria solo a la celda seleccionada
                 celdaSeleccionada.value = sugerencias[Math.floor(Math.random() * sugerencias.length)];
             }
         }
 
         function limpiarTabla() {
-            document.querySelectorAll('input').forEach(input => input.value = "");
+            document.querySelectorAll('textarea').forEach(textarea => textarea.value = "");
             document.getElementById('listaCompra').value = "";
         }
     </script>
